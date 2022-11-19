@@ -8,11 +8,11 @@ import Homescreen from './components/HomeScreen';
 
 const AppNavigator = createStackNavigator(  
   {  
-      Welcome: Homescreen,  
+      Homies: Homescreen,  
       19: bus19  
   },  
   {  
-      initialRouteName: "Welcome"  
+      initialRouteName: "Homies"  
   }  
 );  
 
