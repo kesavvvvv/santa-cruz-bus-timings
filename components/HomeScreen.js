@@ -5,10 +5,10 @@ export default class Homescreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
+
         <Button
-          title="Go to 19"
-          onPress={() => this.props.navigation.navigate('19')}
+          title="Timings"
+          onPress={() => this.props.navigation.navigate('Timings')}
         />
       </View>
     )

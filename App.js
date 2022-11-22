@@ -1,15 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
 import { Component } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
 import { createAppContainer  } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import bus19 from './components/bus19';
+import busTimings from './components/busTimings';
 import Homescreen from './components/HomeScreen';
+import bus19timings from './components/bus19timings';
 
 const AppNavigator = createStackNavigator(  
   {  
       Homies: Homescreen,  
-      19: bus19  
+      Timings: busTimings,
+      bus19timings: bus19timings
   },  
   {  
       initialRouteName: "Homies"  
