@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button} from 'react-native';
+import {Button, View} from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 export default class busMap extends React.Component {
     bus19Response = new Map();
@@ -16,11 +16,17 @@ export default class busMap extends React.Component {
       .then((responseJson) => {
         //Success
 
-        console.log(responseJson[0])        
+        console.log(responseJson)        
         busResponse.set("Lat1", responseJson[0].Latitude);
         busResponse.set("Long1", responseJson[0].Longitude);
-        // busResponse.set("Lat2", responseJson[1].Latitude);
-        // busResponse.set("Long2", responseJson[1].Longitude);
+        busResponse.set("Dir1", responseJson[0].Heading);
+        
+        if(responseJson.size > 1) {
+          busResponse.set("Lat2", responseJson[1].Latitude);
+          busResponse.set("Long2", responseJson[1].Longitude);
+          busResponse.set("Dir2", responseJson[1].Heading);
+        }
+        
 
         bus19Response = busResponse;
         
@@ -38,6 +44,7 @@ export default class busMap extends React.Component {
   };
 render() {
   return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
     <Button
           title="Bus 19"
           onPress={() => {
@@ -50,6 +57,7 @@ render() {
             }
           }
         />   
+        </View>
   );
  }
 }
