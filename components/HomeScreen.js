@@ -10,6 +10,11 @@ export default class Homescreen extends Component {
           title="Timings"
           onPress={() => this.props.navigation.navigate('Timings')}
         />
+        <Button
+          title="Map"
+          onPress={() => this.props.navigation.navigate('busMap')}
+        />
+        
       </View>
     )
 }

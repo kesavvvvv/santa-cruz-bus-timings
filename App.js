@@ -5,13 +5,16 @@ import busTimings from './components/busTimings';
 import Homescreen from './components/HomeScreen';
 import bus19timings from './components/bus19timings';
 import bus19stops from './components/bus19stops';
-
+import busMap from './components/busMap'
+import bus19Map from './components/bus19Map'
 const AppNavigator = createStackNavigator(  
   {  
       Homies: Homescreen,  
       Timings: busTimings,
       bus19timings: bus19timings,
-      bus19stops: bus19stops
+      bus19stops: bus19stops,
+      busMap: busMap,
+      bus19Map: bus19Map
   },  
   {  
       initialRouteName: "Homies"  

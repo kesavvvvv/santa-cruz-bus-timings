@@ -16,6 +16,7 @@ class busTimings extends Component {
           }
         />      
       </View>
+      
     )
   }
 }

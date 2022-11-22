@@ -3,7 +3,7 @@ import { Button, View, Text } from 'react-native';
 
 // bus19Response = new Map();
 
-export default class bus19timings extends Component {
+export default class bus19stops extends Component {
 
   bus19Response = new Map();
   nationalstop = () => {
