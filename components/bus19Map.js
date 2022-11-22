@@ -32,10 +32,10 @@ render() {
   if(dir1 == "NE"){
     rot1 = 315
   }
-  if(this.props.navigation.state.params.bus19Response.size > 3) {
-    var lat2 = this.props.navigation.state.params.bus19Response.get("Lat1")
-  var long2 = this.props.navigation.state.params.bus19Response.get("Long1")
-  var dir2 = this.props.navigation.state.params.bus19Response.get("Dir1")
+  if(this.props.navigation.state.params.bus19Response.get("Lat2")) {
+    var lat2 = this.props.navigation.state.params.bus19Response.get("Lat2")
+  var long2 = this.props.navigation.state.params.bus19Response.get("Long2")
+  var dir2 = this.props.navigation.state.params.bus19Response.get("Dir2")
   var rot2 = 0
   if(dir2 == "E"){
     rot2 = 0
