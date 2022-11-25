@@ -14,8 +14,17 @@ class busTimings extends Component {
               this.props.navigation.navigate('bus19stops')
             }
           }
+        />  
+        <Button
+          title="Bus 20"
+          onPress={() => {
+              this.props.navigation.navigate('bus20stops')
+            }
+          }
         />      
       </View>
+
+      
       
     )
   }

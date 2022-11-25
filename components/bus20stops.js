@@ -3,7 +3,7 @@ import { Button, View, Text } from 'react-native';
 
 // bus19Response = new Map();
 
-export default class bus19stops extends Component {
+export default class bus20stops extends Component {
 
   bus19Response = new Map();
   nationalstop = () => {
@@ -114,7 +114,7 @@ export default class bus19stops extends Component {
         console.log(responseJson[0].RouteID)    
         console.log(responseJson.length)    
         for (let i= 0; i< responseJson.length; i++) {
-          if(responseJson[i].RouteID == "16149") {
+          if(responseJson[i].RouteID == "18085") {
             console.log(responseJson[i].Arrivals.length)  
             for (let index = 0; index < responseJson[i].Arrivals.length; index++) {
               if(responseJson[i].Arrivals[index]) {
