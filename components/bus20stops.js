@@ -10,7 +10,7 @@ export default class bus20stops extends Component {
     //GET request
     var busResponse = new Map();
     
-    fetch('https://cruzmetro.com/Stop/4747236/Arrivals?customerID=169', {
+    fetch('https://cruzmetro.com/Stop/4747924/Arrivals?customerID=169', {
       method: 'GET',
       //Request Type
     })
@@ -21,7 +21,7 @@ export default class bus20stops extends Component {
 
         console.log(responseJson[0])        
         for (let i= 0; i< responseJson.length; i++) {
-          if(responseJson[i].RouteID == "16149") {
+          if(responseJson[i].RouteID == "16150" || responseJson[i].RouteID == "18085" || responseJson[i].RouteID == "18086") {
             console.log(responseJson[i].Arrivals.length)  
             for (let index = 0; index < responseJson[i].Arrivals.length; index++) {
               if(responseJson[i].Arrivals[index]) {
@@ -56,7 +56,7 @@ export default class bus20stops extends Component {
     //GET request 
     var busResponse = new Map();
     
-    fetch('https://cruzmetro.com/Stop/4747884/Arrivals?customerID=169', {
+    fetch('https://cruzmetro.com/Stop/4747440/Arrivals?customerID=169', {
       method: 'GET',
       //Request Type
     })
@@ -67,7 +67,7 @@ export default class bus20stops extends Component {
 
         console.log(responseJson[0])        
         for (let i= 0; i< responseJson.length; i++) {
-          if(responseJson[i].RouteID == "16149") {
+          if(responseJson[i].RouteID == "16150" || responseJson[i].RouteID == "18085" || responseJson[i].RouteID == "18086") {
             console.log(responseJson[i].Arrivals.length)  
             for (let index = 0; index < responseJson[i].Arrivals.length; index++) {
               if(responseJson[i].Arrivals[index]) {
@@ -114,7 +114,7 @@ export default class bus20stops extends Component {
         console.log(responseJson[0].RouteID)    
         console.log(responseJson.length)    
         for (let i= 0; i< responseJson.length; i++) {
-          if(responseJson[i].RouteID == "18085") {
+          if(responseJson[i].RouteID == "16150" || responseJson[i].RouteID == "18085" || responseJson[i].RouteID == "18086") {
             console.log(responseJson[i].Arrivals.length)  
             for (let index = 0; index < responseJson[i].Arrivals.length; index++) {
               if(responseJson[i].Arrivals[index]) {
@@ -157,7 +157,7 @@ export default class bus20stops extends Component {
     //GET request 
     var busResponse = new Map();
     
-    fetch('https://cruzmetro.com/Stop/4747886/Arrivals?customerID=169', {
+    fetch('https://cruzmetro.com/Stop/4747635/Arrivals?customerID=169', {
       method: 'GET',
       //Request Type
     })
@@ -168,7 +168,7 @@ export default class bus20stops extends Component {
 
         console.log(responseJson)        
         for (let i= 0; i< responseJson.length; i++) {
-          if(responseJson[i].RouteID == "16149") {
+          if(responseJson[i].RouteID == "16150" || responseJson[i].RouteID == "18085" || responseJson[i].RouteID == "18086") {
             console.log(responseJson[i].Arrivals.length)  
             for (let index = 0; index < responseJson[i].Arrivals.length; index++) {
               if(responseJson[i].Arrivals[index]) {

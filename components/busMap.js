@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View} from 'react-native';
+import {Button, View, Text, StyleSheet } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 export default class busMap extends React.Component {
     bus19Response = new Map();
@@ -122,7 +122,14 @@ export default class busMap extends React.Component {
   };
 render() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={[styles.container, {
+      // Try setting `flexDirection` to `"row"`.
+      flexDirection: "column"
+    }]}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }} >
+      <Text>Select bus number to see its current location on map</Text>
+      </View>
+    <View style={{ flex: 4, alignItems: 'center', justifyContent: 'center' }}>
     <Button
           title="Bus 19"
           onPress={() => {
@@ -160,6 +167,14 @@ render() {
           }
         /> 
         </View>
+        </View>
   );
  }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
+});
